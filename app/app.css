@@ -1,9 +1,5 @@
 @import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
 
 html,
 body {
@@ -13,3 +9,31 @@ body {
     color-scheme: dark;
   }
 }
+
+.navbar{
+  @apply bg-red-500 p-4;
+}
+
+.navbar-content{
+  @apply flex justify-around ;
+}
+
+.navbar-content span{
+  @apply text-white text-lg uppercase;
+}
+
+.navbar-link{
+  @apply text-white text-lg uppercase hover:text-yellow-500 hover:underline;
+}
+
+.header{
+  @apply flex flex-wrap justify-center items-center;
+}
+
+.header h1{
+  @apply text-4xl font-bold ;
+  font-family: "Tektur", sans-serif;
+  font-weight: 900;
+}
+
+  
