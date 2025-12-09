@@ -1,39 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Tektur:wght@400..900&display=swap');
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+	@apply bg-white dark:bg-gray-950;
+	font-family: "Roboto", sans-serif;
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+	@media (prefers-color-scheme: dark) {
+		color-scheme: dark;
+	}
 }
 
-.navbar{
-  @apply bg-red-500 p-4;
+/* Barra de navegación */
+.navbar {
+	@apply text-white bg-blue-900 py-4;
 }
 
-.navbar-content{
-  @apply flex justify-around ;
+.navbar-container {
+	@apply flex justify-around;
 }
 
-.navbar-content span{
-  @apply text-white text-lg uppercase;
+.navbar-item {
+	@apply text-lg font-bold uppercase;
 }
 
-.navbar-link{
-  @apply text-white text-lg uppercase hover:text-yellow-500 hover:underline;
+.navbar-link {
+	@apply text-white hover:underline;
 }
 
-.header{
-  @apply flex flex-wrap justify-center items-center;
+/* Encabezado */
+.header {
+	@apply bg-blue-100 py-10 px-24;
 }
 
-.header h1{
-  @apply text-4xl font-bold ;
-  font-family: "Tektur", sans-serif;
-  font-weight: 900;
+.header-container {
+	@apply flex flex-wrap items-center;
 }
 
-  
+.header-title {
+	font-family: "Miniver", cursive;
+}
+
+/* Secciones globales */
+.section {
+	@apply py-15 px-20 border-t-10 border-blue-900;
+}
+
+.section-title {
+	@apply text-4xl font-bold mb-5 text-center text-blue-900 uppercase;
+}
+
+.section-description {
+	@apply text-lg mb-5 text-justify;
+}
+
+/* Tarjetas */
+.card {
+	@apply bg-white border rounded-lg;
+}
+
+.card-header,
+.card-content,
+.card-footer {
+	@apply px-6 py-3;
+}
+
+.card-footer {
+	@apply text-center;
+}
+
+/* Sección de contacto */
+.contact-title {
+	@apply text-3xl font-bold mb-5 text-center text-indigo-900
+}
+
+.contact-description {
+	@apply text-base mb-5 text-justify;
+}
+
+/* Formulario de contacto */
+.contact-form {
+	@apply bg-white p-2;
+}
+
+.input-label {
+	@apply block text-sm text-slate-700 font-semibold mb-2;
+}
+
+.input-field {
+	@apply border-1 border-gray-500 rounded-lg w-full px-4 py-2 bg-gray-50 text-sm outline-none focus:border-indigo-900;
+}
+
+.input-textarea {
+	@apply resize-none h-32;
+}
+
+/* Botones */
+.btn {
+	@apply px-4 py-2 text-sm rounded-lg font-semibold cursor-pointer transition-colors;
+}
+
+.btn-main {
+	@apply bg-blue-950 text-white hover:bg-blue-700;
+}
+

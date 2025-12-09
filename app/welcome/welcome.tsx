@@ -1,30 +1,33 @@
-import logoDark from "./logo-dark.svg";
-import logoLight from "./logo-light.svg";
+import Navbar from '../design/Navbar';
+import Header from '../components/main/Header';
+import ServicesSection from '../content/home/ServicesSection';
+import ContactSection from '../content/home/ContactSection';
 
 export function Welcome() {
-  return (
-   <>
-   {/*Logo */}
-   <div className="logo">
-      <img src={logoDark} alt="Logo" />
-   </div>
-   {/*Fin logo */}
-   {/*Header*/}
-   <div className="header">
-      <h1>Tu mejor elección, tus mejores compras</h1>
-   </div>
-   {/*Fin header*/}
-   {/*Creando navbar */}
-   <div className="navbar">
-      <nav>
-         <div className="navbar-content">
-            <span className="navbar-link"><a href="">Home</a></span>
-            <span className="navbar-link"><a href="">About</a></span>
-            <span className="navbar-link"><a href="">Contact</a></span>
-         </div>
-      </nav>
-   </div>
-   {/*Fin navbar */}
-   </>
-  );
+	return (
+		<>
+			{/** Navbar (Menú de navegación) */}
+			<Navbar></Navbar>
+
+			{/* Header (Encabezado) */}
+			<Header></Header>
+
+			{/* Main (Contenido principal) */}
+			<main>
+
+				{/* Sección de Servicios */}
+				<ServicesSection></ServicesSection>
+
+				{/* Sección de contacto */}
+				<ContactSection></ContactSection>
+			</main>
+
+			{/* Footer (Pie de página) */}
+			<footer>
+				Pie de página
+			</footer>
+		</>
+	);
 }
+
+
