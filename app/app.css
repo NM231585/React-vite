@@ -58,7 +58,7 @@ body {
 
 /* Tarjetas */
 .card {
-	@apply bg-white border rounded-lg;
+	@apply bg-white border rounded-lg text-blue-900;
 }
 
 .card-header,
@@ -104,5 +104,33 @@ body {
 
 .btn-main {
 	@apply bg-blue-950 text-white hover:bg-blue-700;
+}
+
+.footer {
+	@apply bg-blue-900 text-white py-4;
+}
+
+.footer-content {
+	@apply flex flex-col items-center border-t-10 border-blue-900;
+}
+
+.footer-title {
+	@apply text-2xl font-bold mt-5;
+}
+
+.footer-description {
+	@apply text-lg mb-5;
+}
+
+.footer-links {
+	@apply flex justify-center gap-5 mb-5;
+}
+
+.footer-link {
+	@apply text-lg font-bold uppercase ;
+}
+
+.footer-link:hover {
+	@apply text-blue-900;
 }
 
